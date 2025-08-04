@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+Modern, premium design inspired by sophisticated agencies.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 26% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+
+    --primary: 230 35% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 230 35% 35%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 230 35% 25%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 230 35% 95%;
+    --accent-foreground: 230 35% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* AMR CodeStuff Brand Colors - Premium Navy Blue Design System */
+    --gradient-primary: linear-gradient(135deg, hsl(230 35% 25%), hsl(230 35% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 35% 25% / 0.7), hsl(220 35% 30% / 0.6));
+    --gradient-tech: linear-gradient(135deg, hsl(230 35% 25%), hsl(220 35% 30%));
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%), hsl(230 35% 35%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.05), hsl(0 0% 100% / 0.1));
+    --shadow-elegant: 0 20px 60px -10px hsl(230 35% 25% / 0.25);
+    --shadow-glow: 0 0 60px hsl(230 35% 35% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(230 35% 25% / 0.15);
+    --shadow-hover: 0 12px 40px -8px hsl(230 35% 25% / 0.25);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 26% 14%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 26% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 26% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 230 35% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 230 35% 45%;
+
+    --secondary: 220 20% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 25%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 220 20% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 217 91% 60%;
+
+    /* AMR CodeStuff Brand Colors - Premium Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(230 35% 35%), hsl(230 35% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 14% / 0.7), hsl(220 26% 18% / 0.6));
+    --gradient-tech: linear-gradient(135deg, hsl(230 35% 35%), hsl(220 35% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%), hsl(230 35% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.08), hsl(0 0% 100% / 0.12));
+    --shadow-elegant: 0 20px 60px -10px hsl(230 35% 35% / 0.4);
+    --shadow-glow: 0 0 60px hsl(230 35% 45% / 0.5);
+    --shadow-card: 0 8px 32px -8px hsl(230 35% 35% / 0.3);
+    --shadow-hover: 0 12px 40px -8px hsl(230 35% 35% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    scroll-behavior: smooth;
+  }
+
+  /* Modern scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+
+  /* Smooth animations */
+  * {
+    transition: var(--transition-smooth);
+  }
+}
