@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Code, Cog, Brain, Server, ArrowRight, CheckCircle, Star, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Testimonials from '@/components/Testimonials';
-import ImageCarousel from '@/components/ImageCarousel';
+
 import ScrollReveal from '@/components/ScrollReveal';
 import ParallaxBackground from '@/components/ParallaxBackground';
 import { motion } from 'framer-motion';
@@ -69,7 +69,8 @@ const Index = () => {
         style={{ backgroundImage: `url(${heroWaveBackground})` }}
       >
         {/* Enhanced gradient overlay for better text visibility */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background/80 to-accent/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-background/40"></div>
         
         {/* Floating shapes for modern effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -106,9 +107,9 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto font-inter font-light"
             >
-              AMR CodeStuff specializes in <span className="font-semibold text-primary">.NET development</span>, 
-              <span className="font-semibold text-primary"> automation solutions</span>, 
-              and <span className="font-semibold text-primary">AI integration</span> for businesses nationwide.
+              AMR CodeStuff specializes in <span className="font-semibold text-white">.NET development</span>, 
+              <span className="font-semibold text-white"> automation solutions</span>, 
+              and <span className="font-semibold text-white">AI integration</span> for businesses nationwide.
             </motion.p>
             
             <motion.div
@@ -279,24 +280,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Image Carousel Section */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-4 lg:px-8">
-          <ScrollReveal direction="up" delay={0.1}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                See Our Work in Action
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter font-light">
-                From strategic planning to successful delivery, discover how we transform businesses through technology.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal direction="up" delay={0.3}>
-            <ImageCarousel />
-          </ScrollReveal>
-        </div>
-      </section>
 
       {/* Testimonials */}
       <Testimonials />
@@ -333,8 +316,8 @@ const Index = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:shadow-glow backdrop-blur-sm">
-                <a href="tel:(307) 372-1880">
-                  Call Now: (307) 372-1880
+                <a href="tel:(630) 570-0549">
+                  Call Now: (630) 570-0549
                 </a>
               </Button>
             </div>
